@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="501.0" prefWidth="394.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToDoListFormController">
+   <children>
+      <Pane layoutX="9.0" layoutY="14.0" prefHeight="47.0" prefWidth="375.0" style="-fx-background-color: #00CED1; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="124.0" layoutY="-1.0" text="Done Deal">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.018939393939393936" endY="1.0" startY="0.14393936504017224">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+      <JFXListView fx:id="listTask" layoutX="75.0" layoutY="147.0" prefHeight="230.0" prefWidth="248.0" style="-fx-background-color: #808080; -fx-background-radius: 20;" />
+      <Pane layoutX="3.0" layoutY="407.0" prefHeight="38.0" prefWidth="383.0">
+         <children>
+            <JFXTextField fx:id="txtAddTask" layoutX="42.0" layoutY="6.0" onAction="#txtAddTaskOnAction" prefHeight="26.0" prefWidth="336.0" promptText="Add Task" style="-fx-background-color: #C0C0C0; -fx-background-radius: 8;" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="17.0" layoutY="9.0" onMouseClicked="#imgAddOnMouseClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/more.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <DatePicker fx:id="dateCurrentDate" editable="false" layoutX="14.0" layoutY="93.0" prefHeight="26.0" prefWidth="129.0" />
+      <JFXButton layoutX="170.0" layoutY="462.0" onAction="#btnViewOnAction" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #FFFF00; -fx-background-radius: 12;" text="VIEW">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
